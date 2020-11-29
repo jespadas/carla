@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #007bcc;
+  background: -moz-radial-gradient(center, ellipse cover, #007bcc 0%, #005299 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #007bcc), color-stop(100%, #005299));
+  background: -webkit-radial-gradient(center, ellipse cover, #007bcc 0%, #005299 100%);
+  background: -o-radial-gradient(center, ellipse cover, #007bcc 0%, #005299 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #007bcc 0%, #6c5299 100%);
+  background: radial-gradient(ellipse at center, #007bcc 0%, #005299 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a27bcc', endColorstr='#6c5299', GradientType=1);
+}
+/* ============================================== POSITION
+*/
+.cake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+}
+/* ============================================== BASE
+*/
+.cake:after {
+  background: #ebe3e1;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 2px;
+}
+/* ============================================== Candle
+*/
+.velas {
+  background: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -2.5px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 16.66666667px;
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+/* ============================================== Fire
+*/
+.fuego {
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  margin-left: -3.33333333px;
+  width: 6.66666667px;
+  height: 12.5px;
+}
+.fuego:nth-child(1) {
+  animation: fuego 2s infinite;
+}
+.fuego:nth-child(2) {
+  animation: fuego 1.5s infinite;
+}
+.fuego:nth-child(3) {
+  animation: fuego 1s infinite;
+}
+.fuego:nth-child(4) {
+  animation: fuego 0.5s infinite;
+}
+.fuego:nth-child(5) {
+  animation: fuego 0.2s infinite;
+}
+/* ============================================== Animation Fire
+*/
+@keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    transform: translateY(-20px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+}
+/* ============================================== Frosting
+*/
+.cobertura {
+  background: #ece7e3;
+  border-radius: 50px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -27.77777778px;
+  margin-top: -5px;
+  width: 55.55555556px;
+  height: 12.5px;
+  z-index: 10;
+}
+.cobertura:after,
+.cobertura:before {
+  background: #ece7e3;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+}
+.cobertura:after {
+  top: 6.66666667px;
+  right: 14.28571429px;
+}
+.cobertura:before {
+  top: 10px;
+  right: 9.09090909px;
+}
+/* ============================================== BIZCOCHO
+*/
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 33.33333333px;
+}
+.bizcocho:after,
+.bizcocho:before {
+  background: rgba(236, 231, 227, 0.6);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+}
+.bizcocho:after {
+  top: 30%;
+  left: 0;
+}
+.bizcocho:before {
+  top: 60%;
+  left: 0;
+}
+/* ============================================== TEXT
+*/
+
+.texto {
+  margin-top: 8em;
+  width: max-content;
+}
+
+span {
+  color: rgb(150, 167, 0);
+  width: max-content;
+}
+
+h1,
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  border-spacing: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.texto1 {
+  color: #FFD700;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+.texto2 {
+  color: #FFF8DC;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 700;
+}
